@@ -13,7 +13,6 @@ public class Main {
         ExecutorService executorService = Executors.newFixedThreadPool(5);
 
         // TODO : use JobDescription to build the Job's chain
-
         Job executor1 = new Job(JobName.JOB1.getName(), new Task1());
         Job executor2 = new Job(JobName.JOB2.getName(), new Task2());
         Job executor3 = new Job(JobName.JOB3.getName(), new Task3());
