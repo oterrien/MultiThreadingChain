@@ -1,0 +1,21 @@
+<jobs>
+    <definition>
+        <job name="Job1" task="com.ote.impl.Task1" enter="true"/>
+        <job name="Job2" task="com.ote.impl.Task2"/>
+        <job name="Job3" task="com.ote.impl.Task3"/>
+        <job name="Job4" task="com.ote.impl.Task4"/>
+        <job name="Job5" task="com.ote.impl.Task5" exit="true"/>
+    </definition>
+    <structure>
+        <job ref="Job1">
+            <job ref="Job2">
+                <job ref="Job4">
+                    <job ref="Job5"/>
+                </job>
+            </job>
+            <job ref="Job3">
+                <job ref="Job5"/>
+            </job>
+        </job>
+    </structure>
+</jobs>
