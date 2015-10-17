@@ -44,6 +44,7 @@
                     <readOnly>true</readOnly>
                     <generatePackage>com.ote</generatePackage>
                     <generateDirectory>src/generated/java</generateDirectory>
+                    <locale>en</locale>
                 </configuration>
             </plugin>
         </plugins>

@@ -2,9 +2,9 @@ package com.ote;
 
 import java.util.Random;
 
-public class Task2 extends Task<Object, String> {
+public class Task2 extends Task {
 
-    public String call() throws Exception {
+    public Object call() throws Exception {
 
         int delay = new Random().nextInt(100) * 30;
         System.out.println("## " + this.getClass().getSimpleName()

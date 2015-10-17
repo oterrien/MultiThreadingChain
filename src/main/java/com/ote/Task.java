@@ -6,11 +6,11 @@ import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Future;
 
-public abstract class Task<TIn, TOut> implements Callable<TOut> {
+public abstract class Task implements Callable {
 
-    protected TIn input;
-    private TOut result;
-    private Future<TOut> future;
+    protected Object input;
+    private Object result;
+    private Future future;
 
     protected Task() {
 
@@ -23,7 +23,7 @@ public abstract class Task<TIn, TOut> implements Callable<TOut> {
      * @throws ExecutionException
      * @throws InterruptedException
      */
-    public final TOut getOutput() throws ExecutionException, InterruptedException {
+    public final Object getOutput() throws ExecutionException, InterruptedException {
 
         if (result == null) {
             result = future.get();

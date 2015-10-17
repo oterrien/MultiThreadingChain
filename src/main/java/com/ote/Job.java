@@ -19,13 +19,13 @@ public final class Job implements Nameable {
      * private Callable<TOut> task; private Future<TOut> taskResult;
 	 */
 
-    private Task<?, ?> task;
+    private Task task;
 
     private volatile boolean isStarted;
 
     private Object parameter;
 
-    public Job(String name, Task<?, ?> task) {
+    public Job(String name, Task task) {
         this.name = name;
         this.task = task;
     }

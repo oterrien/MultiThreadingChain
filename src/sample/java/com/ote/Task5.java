@@ -3,9 +3,9 @@ package com.ote;
 import java.util.Map;
 import java.util.Random;
 
-public class Task5 extends Task<Task5.Input, String> {
+public class Task5 extends Task {
 
-    public String call() throws Exception {
+    public Object call() throws Exception {
 
         System.out.println("## " + this.getClass().getSimpleName()
                 + " --> input value : " + this.input);
@@ -19,9 +19,11 @@ public class Task5 extends Task<Task5.Input, String> {
     @Override
     public void setInput(Map<String, Object> result) {
 
-        input = new Input();
+        Input input = new Input();
         input.fromTask3 = (String) result.get(JobName.JOB3.getName());
         input.fromTask4 = (String) result.get(JobName.JOB4.getName());
+
+        super.input = input;
     }
 
     public static class Input {

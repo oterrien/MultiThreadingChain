@@ -3,9 +3,9 @@ package com.ote;
 import java.util.Map;
 import java.util.Random;
 
-public class Task1 extends Task<String, String> {
+public class Task1 extends Task {
 
-    public String call() throws Exception {
+    public Object call() throws Exception {
 
         System.out.println("## " + this.getClass().getSimpleName() + " --> input value : " + this.input);
         int delay = new Random().nextInt(100) * 30;
@@ -18,6 +18,6 @@ public class Task1 extends Task<String, String> {
     @Override
     public void setInput(Map<String, Object> result) {
 
-        input = (String) result.get(JobName.JOB1.getName());
+        input = result.get(JobName.JOB1.getName());
     }
 }
