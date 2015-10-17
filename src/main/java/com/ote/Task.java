@@ -8,11 +8,9 @@ import java.util.concurrent.Future;
 
 public abstract class Task<TIn, TOut> implements Callable<TOut> {
 
-    private TOut result;
-
-    private Future<TOut> future;
-
     protected TIn input;
+    private TOut result;
+    private Future<TOut> future;
 
     protected Task() {
 

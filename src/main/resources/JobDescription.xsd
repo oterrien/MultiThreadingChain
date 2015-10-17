@@ -31,7 +31,7 @@
     </xs:element>
     <xs:complexType name="JobDefinitionType">
         <xs:attribute name="name" type="xs:string"/>
-        <xs:attribute name="task" type="xs:string" />
+        <xs:attribute name="task" type="xs:string"/>
     </xs:complexType>
     <xs:complexType name="JobStructureType">
         <xs:sequence>
