@@ -1,10 +1,9 @@
-package com.ote.impl;
+package com.ote;
 
-import com.ote.Task;
-
+import java.util.Map;
 import java.util.Random;
 
-public class Task3 extends Task<String, String> {
+public class Task4 extends Task<String, String> {
 
     public String call() throws Exception {
         try {
@@ -19,4 +18,9 @@ public class Task3 extends Task<String, String> {
         }
     }
 
+    @Override
+    public void setInput(Map<String, Object> result) {
+
+        input = (String) result.get(JobName.JOB2.getName());
+    }
 }

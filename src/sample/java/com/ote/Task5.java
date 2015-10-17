@@ -1,11 +1,9 @@
-package com.ote.impl;
-
-import com.ote.Task;
+package com.ote;
 
 import java.util.Map;
 import java.util.Random;
 
-public class Task4 extends Task<String, String> {
+public class Task5 extends Task<Task5.Input, String> {
 
     public String call() throws Exception {
         try {
@@ -23,6 +21,19 @@ public class Task4 extends Task<String, String> {
     @Override
     public void setInput(Map<String, Object> result) {
 
-        input = (String) result.get(JobName.JOB2.getName());
+        input = new Task5.Input();
+        input.fromTask3 = (String) result.get(JobName.JOB3.getName());
+        input.fromTask4 = (String) result.get(JobName.JOB4.getName());
+    }
+
+    public static class Input {
+
+        private String fromTask4;
+        private String fromTask3;
+
+        @Override
+        public String toString() {
+            return "fromTask3 : " + fromTask3 + ";" + " fromTask4 : " + fromTask4;
+        }
     }
 }

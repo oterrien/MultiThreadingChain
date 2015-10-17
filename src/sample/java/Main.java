@@ -1,6 +1,4 @@
-package com.ote;
-
-import com.ote.impl.*;
+import com.ote.*;
 
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;

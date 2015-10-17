@@ -1,10 +1,8 @@
-package com.ote.impl;
-
-import com.ote.Task;
+package com.ote;
 
 import java.util.Random;
 
-public class Task2 extends Task<Object, String> {
+public class Task1 extends Task<Object, String> {
 
     public String call() throws Exception {
         try {
@@ -17,4 +15,5 @@ public class Task2 extends Task<Object, String> {
             System.out.println("\tEnd of " + this.getClass().getSimpleName());
         }
     }
+
 }

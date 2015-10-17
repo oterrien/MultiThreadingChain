@@ -1,6 +1,4 @@
-package com.ote.impl;
-
-import com.ote.Nameable;
+package com.ote;
 
 public enum JobName implements Nameable {
 

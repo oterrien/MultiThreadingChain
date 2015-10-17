@@ -1,10 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
 <jobs>
     <definition>
-        <job name="Job1" task="com.ote.impl.Task1" enter="true"/>
-        <job name="Job2" task="com.ote.impl.Task2"/>
-        <job name="Job3" task="com.ote.impl.Task3"/>
-        <job name="Job4" task="com.ote.impl.Task4"/>
-        <job name="Job5" task="com.ote.impl.Task5" exit="true"/>
+        <job name="Job1" task="com.ote.Task1"/>
+        <job name="Job2" task="com.ote.Task2"/>
+        <job name="Job3" task="com.ote.Task3"/>
+        <job name="Job4" task="com.ote.Task4"/>
+        <job name="Job5" task="com.ote.Task5"/>
     </definition>
     <structure>
         <job ref="Job1">
