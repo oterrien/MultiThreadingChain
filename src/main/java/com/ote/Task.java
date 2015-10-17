@@ -8,6 +8,8 @@ import java.util.concurrent.Future;
 
 public abstract class Task<TIn, TOut> implements Callable<TOut> {
 
+    private TOut result;
+
     private Future<TOut> future;
 
     protected TIn input;
@@ -25,7 +27,10 @@ public abstract class Task<TIn, TOut> implements Callable<TOut> {
      */
     public final TOut getOutput() throws ExecutionException, InterruptedException {
 
-        return future.get();
+        if (result == null) {
+            result = future.get();
+        }
+        return result;
     }
 
     /**
@@ -34,7 +39,9 @@ public abstract class Task<TIn, TOut> implements Callable<TOut> {
      * @param executorService
      */
     public final void start(ExecutorService executorService) {
+
         future = executorService.submit(this);
+
     }
 
     /**
