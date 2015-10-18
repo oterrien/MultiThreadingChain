@@ -45,3 +45,4 @@ Temporary Items
 META-INF/*
 src/generated/*
 target/*
+*.iml
