@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<jobs>
-    <definition>
+<chain>
+    <declaration>
         <job name="Job1" task="com.ote.Task1"/>
         <job name="Job2" task="com.ote.Task2"/>
         <job name="Job3" task="com.ote.Task3"/>
         <job name="Job4" task="com.ote.Task4"/>
         <job name="Job5" task="com.ote.Task5"/>
-    </definition>
+    </declaration>
     <structure>
         <job ref="Job1">
             <job ref="Job2">
@@ -19,4 +19,4 @@
             </job>
         </job>
     </structure>
-</jobs>
+</chain>

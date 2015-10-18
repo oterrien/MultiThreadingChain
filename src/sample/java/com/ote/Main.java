@@ -23,8 +23,7 @@ public class Main {
 
     private static Job createJobFromXML() throws Exception {
 
-        File file = new File("D:\\Olivier\\Projets Java\\Repository\\MultiThreadingChain\\src\\sample\\resources", "JobDescription.xml");
-        return new Builder().create(file);
+        return Builder.getInstance().create(ClassLoader.getSystemResourceAsStream("JobDescription.xml"));
     }
 
     private static Job createJobManually() {

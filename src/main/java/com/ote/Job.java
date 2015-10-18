@@ -25,8 +25,12 @@ public final class Job implements Nameable {
 
     private Object parameter;
 
-    public Job(String name, Task task) {
+    private Job(String name){
         this.name = name;
+    }
+
+    public Job(String name, Task task) {
+        this(name);
         this.task = task;
     }
 

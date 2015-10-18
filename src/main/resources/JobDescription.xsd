@@ -1,41 +1,42 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
-    <xs:element name="jobs">
-        <xs:complexType>
-            <xs:sequence>
-                <xs:element name="definition" minOccurs="1" maxOccurs="1">
-                    <xs:complexType>
-                        <xs:sequence>
-                            <xs:element name="job" type="JobDefinitionType" minOccurs="1" maxOccurs="unbounded"/>
-                        </xs:sequence>
-                    </xs:complexType>
-                    <!-- Primary Key and Foreign Key to ensure ./jobs/structure/job@ref refers one of ./jobs/definition/job@name -->
-                    <xs:key name="PKJob">
-                        <xs:selector xpath="./jobs/definition/job"/>
-                        <xs:field xpath="@name"/>
-                    </xs:key>
-                    <xs:keyref name="FKJob" refer="PKJob">
-                        <xs:selector xpath="./jobs/structure/job"/>
-                        <xs:field xpath="@ref"/>
-                    </xs:keyref>
-                </xs:element>
-                <xs:element name="structure" minOccurs="1" maxOccurs="1">
-                    <xs:complexType>
-                        <xs:sequence>
-                            <xs:element name="job" type="JobStructureType" minOccurs="1" maxOccurs="1"/>
-                        </xs:sequence>
-                    </xs:complexType>
-                </xs:element>
-            </xs:sequence>
-        </xs:complexType>
-    </xs:element>
-    <xs:complexType name="JobDefinitionType">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified">
+    <xs:element name="chain" type="ChainDescription"/>
+
+    <xs:complexType name="ChainDescription">
+        <xs:sequence>
+            <xs:element name="declaration" minOccurs="1" maxOccurs="1">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="job" type="JobDefinition" minOccurs="1" maxOccurs="unbounded"/>
+                    </xs:sequence>
+                </xs:complexType>
+                <!-- Primary Key and Foreign Key to ensure ./jobs/structure/job@ref refers one of ./jobs/definition/job@name -->
+                <xs:key name="PKJob">
+                    <xs:selector xpath="./jobs/definition/job"/>
+                    <xs:field xpath="@name"/>
+                </xs:key>
+                <xs:keyref name="FKJob" refer="PKJob">
+                    <xs:selector xpath="./jobs/structure/job"/>
+                    <xs:field xpath="@ref"/>
+                </xs:keyref>
+            </xs:element>
+            <xs:element name="structure" minOccurs="1" maxOccurs="1">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="job" type="JobStructure" minOccurs="1" maxOccurs="1"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="JobDefinition">
         <xs:attribute name="name" type="xs:string"/>
         <xs:attribute name="task" type="xs:string"/>
     </xs:complexType>
-    <xs:complexType name="JobStructureType">
+    <xs:complexType name="JobStructure">
         <xs:sequence>
-            <xs:element name="job" type="JobStructureType" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="job" type="JobStructure" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
         <xs:attribute name="ref" type='xs:string'/>
     </xs:complexType>
