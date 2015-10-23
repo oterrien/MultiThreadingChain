@@ -9,6 +9,9 @@ import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Future;
 
+/**
+ * Created by Olivier on 23/10/2015.
+ */
 public final class Job implements Nameable {
 
     private List<Job> previousJobs = new ArrayList<Job>(10);

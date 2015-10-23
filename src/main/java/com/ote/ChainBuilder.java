@@ -10,6 +10,9 @@ import java.io.InputStream;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * Created by Olivier on 23/10/2015.
+ */
 public final class ChainBuilder {
 
     private static final ChainBuilder INSTANCE = new ChainBuilder();

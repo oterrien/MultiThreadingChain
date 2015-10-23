@@ -3,6 +3,9 @@ package com.ote;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
+/**
+ * Created by Olivier on 23/10/2015.
+ */
 public class Main {
 
     public static void main(String[] args) throws Exception {

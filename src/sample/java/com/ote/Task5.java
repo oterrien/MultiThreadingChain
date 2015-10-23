@@ -3,6 +3,9 @@ package com.ote;
 import java.util.Map;
 import java.util.Random;
 
+/**
+ * Created by Olivier on 23/10/2015.
+ */
 public class Task5 extends Task {
 
     public Object call() throws Exception {

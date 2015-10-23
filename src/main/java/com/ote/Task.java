@@ -6,6 +6,9 @@ import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Future;
 
+/**
+ * Created by Olivier on 23/10/2015.
+ */
 public abstract class Task implements Callable {
 
     protected Object input;
