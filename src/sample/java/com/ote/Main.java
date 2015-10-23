@@ -1,6 +1,5 @@
 package com.ote;
 
-import java.io.File;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
@@ -23,7 +22,7 @@ public class Main {
 
     private static Job createJobFromXML() throws Exception {
 
-        return Builder.getInstance().create(ClassLoader.getSystemResourceAsStream("JobDescription.xml"));
+        return ChainBuilder.getInstance().create(ClassLoader.getSystemResourceAsStream("JobDescription.xml"));
     }
 
     private static Job createJobManually() {

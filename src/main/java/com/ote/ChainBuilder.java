@@ -10,12 +10,12 @@ import java.io.InputStream;
 import java.util.HashMap;
 import java.util.Map;
 
-public final class Builder {
+public final class ChainBuilder {
 
-    private static final Builder INSTANCE = new Builder();
+    private static final ChainBuilder INSTANCE = new ChainBuilder();
     private final Unmarshaller JaxbUnmarshaller;
 
-    private Builder() {
+    private ChainBuilder() {
         try {
             JAXBContext JaxbContext = JAXBContext.newInstance(ChainDescription.class);
             JaxbUnmarshaller = JaxbContext.createUnmarshaller();
@@ -24,7 +24,7 @@ public final class Builder {
         }
     }
 
-    public static Builder getInstance() {
+    public static ChainBuilder getInstance() {
         return INSTANCE;
     }
 
