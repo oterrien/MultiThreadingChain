@@ -1,4 +1,4 @@
-package com.ote.util.threading;
+package com.ote.threading.util;
 
 import java.util.Map;
 import java.util.concurrent.Callable;

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <chain>
     <declaration>
-        <job name="Job1" task="com.ote.Task1"/>
-        <job name="Job2" task="com.ote.Task2"/>
-        <job name="Job3" task="com.ote.Task3"/>
-        <job name="Job4" task="com.ote.Task4"/>
-        <job name="Job5" task="com.ote.Task5"/>
+        <job name="Job1" task="com.ote.threading.sample.Task1"/>
+        <job name="Job2" task="com.ote.threading.sample.Task2"/>
+        <job name="Job3" task="com.ote.threading.sample.Task3"/>
+        <job name="Job4" task="com.ote.threading.sample.Task4"/>
+        <job name="Job5" task="com.ote.threading.sample.Task5"/>
     </declaration>
     <structure>
         <job ref="Job1">

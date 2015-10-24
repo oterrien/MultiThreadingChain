@@ -39,15 +39,61 @@
                     </execution>
                 </executions>
                 <configuration>
+                    <schemaDirectory>src/main/resources/com/ote/threading/util/structure</schemaDirectory>
                     <markGenerated>true</markGenerated>
                     <forceRegenerate>true</forceRegenerate>
                     <readOnly>true</readOnly>
-                    <generatePackage>com.ote.util.threading.structure</generatePackage>
+                    <generatePackage>com.ote.threading.util.structure</generatePackage>
                     <generateDirectory>src/generated/java</generateDirectory>
                     <locale>en</locale>
                 </configuration>
             </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>build-helper-maven-plugin</artifactId>
+                <version>1.4</version>
+                <executions>
+                    <execution>
+                        <id>add-sources</id>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <goal>add-source</goal>
+                        </goals>
+                        <configuration>
+                            <sources>
+                                <source>${basedir}/src/sample/java</source>
+                            </sources>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>add-resources</id>
+                        <phase>generate-resources</phase>
+                        <goals>
+                            <goal>add-resource</goal>
+                        </goals>
+                        <configuration>
+                            <resources>
+                                <resource>
+                                    <directory>src/sample/resources</directory>
+                                    <target-path>com/ote/threading/sample</target-path>
+                                    <include>*.xml</include>
+                                </resource>
+                            </resources>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>2.3.2</version>
+                <configuration>
+                    <excludes>
+                        <exclude>**/sample/*</exclude>
+                        <exclude>**/sample</exclude>
+                    </excludes>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
-
 </project>

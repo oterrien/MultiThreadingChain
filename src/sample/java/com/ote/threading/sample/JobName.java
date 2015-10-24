@@ -1,4 +1,4 @@
-package com.ote;
+package com.ote.threading.sample;
 
 /**
  * Created by Olivier on 23/10/2015.

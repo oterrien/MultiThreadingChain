@@ -1,4 +1,4 @@
-package com.ote.util.threading;
+package com.ote.threading.util;
 
 import java.util.ArrayList;
 import java.util.HashMap;
