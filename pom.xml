@@ -5,10 +5,10 @@
 
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.ote.api</groupId>
-    <artifactId>MultiThreadingChain</artifactId>
+    <artifactId>asynchronouschain.ote</artifactId>
     <version>1.0-SNAPSHOT</version>
 
-    <name>Framework and samples classes to build a multithreaded chain of jobs</name>
+    <name>Framework and samples classes to build an asynchronous chain of jobs</name>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -42,7 +42,7 @@
                     <markGenerated>true</markGenerated>
                     <forceRegenerate>true</forceRegenerate>
                     <readOnly>true</readOnly>
-                    <generatePackage>com.ote</generatePackage>
+                    <generatePackage>com.ote.util.threading.structure</generatePackage>
                     <generateDirectory>src/generated/java</generateDirectory>
                     <locale>en</locale>
                 </configuration>
