@@ -79,7 +79,7 @@ public final class Job {
             System.out.println("# Start Job " + name);
 
             Map<String, Object> result = new HashMap<String, Object>(10);
-            result.put(this.name, parameter);
+            result.put(this.name, parameter); //could be null
             for (Job previousJob : previousJobs) {
                 result.put(previousJob.name, previousJob.task.getOutput());
             }

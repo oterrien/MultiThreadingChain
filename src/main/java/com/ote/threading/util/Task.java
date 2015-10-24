@@ -28,10 +28,7 @@ public abstract class Task implements Callable {
      */
     public final Object getOutput() throws ExecutionException, InterruptedException {
 
-        if (result == null) {
-            result = future.get();
-        }
-        return result;
+        return future.get();
     }
 
     /**
