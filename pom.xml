@@ -74,7 +74,7 @@
                         <configuration>
                             <resources>
                                 <resource>
-                                    <directory>src/sample/resources</directory>
+                                    <directory>src/sample/resources/com/ote/threading/sample</directory>
                                     <target-path>com/ote/threading/sample</target-path>
                                     <include>*.xml</include>
                                 </resource>
@@ -89,8 +89,7 @@
                 <version>2.3.2</version>
                 <configuration>
                     <excludes>
-                        <exclude>**/sample/*</exclude>
-                        <exclude>**/sample</exclude>
+                        <exclude>**/sample/**</exclude>
                     </excludes>
                 </configuration>
             </plugin>

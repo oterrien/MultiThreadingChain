@@ -28,7 +28,7 @@ public class Main {
 
     private static Job createJobFromXML() throws Exception {
 
-        return ChainBuilder.getInstance().create(ClassLoader.getSystemResourceAsStream("JobDescription.xml"));
+        return ChainBuilder.getInstance().create(ClassLoader.getSystemResourceAsStream("com/ote/threading/sample/JobDescription.xml"));
     }
 
     private static Job createJobManually() {
