@@ -12,7 +12,6 @@ import java.util.concurrent.Future;
 public abstract class Task implements Callable {
 
     protected Object input;
-    private Object result;
     private Future future;
 
     protected Task() {
